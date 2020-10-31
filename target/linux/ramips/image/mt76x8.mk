@@ -2,6 +2,15 @@
 # MT76x8 Profiles
 #
 
+define Device/HYH-MT7688
+  DTS := HYH-MT7688 
+  IMAGES :=sysupgrade.bin
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  DEVICE_TITLE := HYH-MT7688
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci
+endef
+TARGET_DEVICES += HYH-MT7688
+
 define Device/tplink
   TPLINK_FLASHLAYOUT :=
   TPLINK_HWID :=
